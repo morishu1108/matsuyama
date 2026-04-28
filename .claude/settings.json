@@ -31,7 +31,13 @@
       "Bash(vercel whoami *)",
       "Bash(git commit -m ' *)",
       "Bash(gh repo *)",
-      "Bash(npm uninstall *)"
+      "Bash(npm uninstall *)",
+      "Bash(vercel link *)",
+      "Bash(vercel --yes --scope morita-7867s-projects)",
+      "Bash(vercel --yes --scope morita-7867s-projects --prebuilt)",
+      "Bash(vercel build *)",
+      "Bash(vercel deploy *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); d['engines']={'node':'>=20'}; print\\(json.dumps\\(d, indent=2, ensure_ascii=False\\)\\)\")"
     ],
     "additionalDirectories": [
       "/Users/morishu1108/Works/claude/matsuyama/src/app/api/records",

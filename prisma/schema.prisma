@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model StudyRecord {
+  id         String          @id @default(cuid())
+  title      String
+  content    String?
+  duration   Int
+  date       DateTime        @default(now())
+  categoryId String?
+  category   Category?       @relation(fields: [categoryId], references: [id])
+  tags       TagsOnRecords[]
+  createdAt  DateTime        @default(now())
+  updatedAt  DateTime        @updatedAt
+}
+
+model Category {
+  id           String        @id @default(cuid())
+  name         String        @unique
+  color        String        @default("#6366f1")
+  studyRecords StudyRecord[]
+  goals        Goal[]
+  createdAt    DateTime      @default(now())
+}
+
+model Tag {
+  id      String          @id @default(cuid())
+  name    String          @unique
+  records TagsOnRecords[]
+}
+
+model TagsOnRecords {
+  recordId String
+  tagId    String
+  record   StudyRecord @relation(fields: [recordId], references: [id], onDelete: Cascade)
+  tag      Tag         @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([recordId, tagId])
+}
+
+model Goal {
+  id          String    @id @default(cuid())
+  title       String
+  targetHours Int
+  period      String
+  categoryId  String?
+  category    Category? @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}

@@ -1,7 +1,39 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git --yes)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git --yes)",
+      "Read(//Users/morishu1108/.nvm/versions/**)",
+      "Bash(brew list *)",
+      "Read(//usr/local/opt/**)",
+      "Bash(export PATH=\"/usr/local/Cellar/node/25.9.0_1/bin:$PATH\")",
+      "Bash(npx shadcn@latest init -d)",
+      "Bash(npm install *)",
+      "Bash(npx shadcn@latest add card input label textarea select badge tabs dialog alert-dialog sheet separator scroll-area progress toast)",
+      "Bash(npx shadcn@latest add card input label textarea select badge tabs dialog alert-dialog sheet separator scroll-area progress sonner)",
+      "Bash(npx prisma *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001)",
+      "Bash(curl -s http://localhost:3001/api/stats)",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s http://localhost:3001/api/records)",
+      "Bash(curl -s http://localhost:3001/api/categories)",
+      "Bash(curl -sv http://localhost:3001/api/stats)",
+      "Bash(curl -s -w \"\\\\n%{http_code}\" http://localhost:3001/api/stats)",
+      "Bash(python3 -c \"import sys, json; d=sys.stdin.read\\(\\); idx=d.find\\('\\\\\"err\\\\\":{'\\); print\\(d[idx:idx+500] if idx>=0 else d[:500]\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -v http://localhost:3001/api/stats)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(echo \"PID: $!\")",
+      "Bash(node -e \"const D=require\\('better-sqlite3'\\); const db=new D\\('/Users/morishu1108/Works/claude/matsuyama/prisma/dev.db'\\); console.log\\(db.pragma\\('table_list'\\).map\\(t=>t.name\\)\\);\")",
+      "Bash(curl -s -X POST http://localhost:3001/api/categories -H 'Content-Type: application/json' -d '{\"name\":\"プログラミング\",\"color\":\"#6366f1\"}')",
+      "Bash(curl -s -X POST http://localhost:3001/api/records -H 'Content-Type: application/json' -d '{\"title\":\"React Hooks の復習\",\"content\":\"useEffect, useCallback を学習\",\"duration\":90,\"tags\":[\"react\",\"javascript\"]}')",
+      "Bash(git -C /Users/morishu1108/Works/claude/matsuyama status)",
+      "Bash(vercel whoami *)"
+    ],
+    "additionalDirectories": [
+      "/Users/morishu1108/Works/claude/matsuyama/src/app/api/records",
+      "/Users/morishu1108/Works/claude/matsuyama/src/app/api/goals",
+      "/Users/morishu1108/Works/claude/matsuyama/src/app/records"
     ]
   }
 }

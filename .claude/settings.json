@@ -28,7 +28,10 @@
       "Bash(curl -s -X POST http://localhost:3001/api/categories -H 'Content-Type: application/json' -d '{\"name\":\"プログラミング\",\"color\":\"#6366f1\"}')",
       "Bash(curl -s -X POST http://localhost:3001/api/records -H 'Content-Type: application/json' -d '{\"title\":\"React Hooks の復習\",\"content\":\"useEffect, useCallback を学習\",\"duration\":90,\"tags\":[\"react\",\"javascript\"]}')",
       "Bash(git -C /Users/morishu1108/Works/claude/matsuyama status)",
-      "Bash(vercel whoami *)"
+      "Bash(vercel whoami *)",
+      "Bash(git commit -m ' *)",
+      "Bash(gh repo *)",
+      "Bash(npm uninstall *)"
     ],
     "additionalDirectories": [
       "/Users/morishu1108/Works/claude/matsuyama/src/app/api/records",
